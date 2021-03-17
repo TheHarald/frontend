@@ -5,15 +5,22 @@ import info from  './res/info.svg'
 import buner from './res/buner.svg'
 import docs from './res/docs.svg'
 import logo_left from './res/logo_left.svg'
+import ToDoList from "./ToDo/ToDoList";
+import Item from "./ToDo/Item";
 
 
 
 function App() {
-  return(
-      <div>
-          <Header/>
-          <ButtonBlue/>
+    const todos= [
+        {id:1, completed:false, title:'Доделать теорвер.'},
+        {id:2, completed:false, title:'Доделать джаву.'},
+        {id:3, completed:false, title:'Доделать питон.'}
+    ]
 
+  return(
+      <div className={'wrapper'}>
+        <h2>Test string</h2>
+        <ToDoList todos={todos}/>
       </div>);
 
 }

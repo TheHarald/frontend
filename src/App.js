@@ -2,38 +2,46 @@ import './App.css';
 import button from './res/button.svg'
 import logo from  './res/logo.svg'
 import info from  './res/info.svg'
+import buner from './res/buner.svg'
+import docs from './res/docs.svg'
+import logo_left from './res/logo_left.svg'
+
 
 
 function App() {
   return(
       <div>
           <Header/>
-          <Info/>
+          <ButtonBlue/>
+
       </div>);
 
 }
 
-
 function Header(){
   return(
       <div className={'Header'}>
-        <Logo/>
+          <div className={'Logo'}>
+              <img src={logo}/>
+          </div>
+          <div className={'Info'}>
+              <img src={info}/>
+          </div>
+          <div className={'Docs'}>
+              <img src={docs}/>
+          </div>
+          <div className={'Logo-left'}>
+              <img src={logo_left}/>
+          </div>
       </div>
   );
 }
 
-function Logo(){
-    return(
-        <div className={'Logo'}>
-            <img src={logo}/>
-        </div>
-    );
-}
 
-function Info(){
+function Buner(){
     return(
-        <div className={'Logo'}>
-            <img src={info}/>
+        <div className={'Buner'}>
+            <img src={buner}/>
         </div>
     );
 }
@@ -53,7 +61,7 @@ function Some(){
 
 function ButtonBlue(){
   return(
-      <div>
+      <div className={'Button'}>
         <img src={button}/>
         </div>
   );

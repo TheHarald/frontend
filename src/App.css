@@ -22,7 +22,7 @@
 
 .Button{
   /* Заполнить */
-
+  top:100px;
   position: relative;
   width: 218px;
   height: 57px;
@@ -42,7 +42,7 @@
   position: absolute;
   width: 1440px;
   height: 44px;
-  left: 0px;
+  left: 10px;
   top: 0px;
 }
 
@@ -62,7 +62,7 @@
   margin: 0px 1px;
 }
 
-.info{
+.Info{
   /* Информация */
 
 
@@ -77,6 +77,52 @@
 
   flex: none;
   order: 1;
+  flex-grow: 0;
+  margin: 0px 1px;
+}
+.Buner{
+  /* Банер */
+
+  position: absolute;
+  width: 1440px;
+  height: 198px;
+  left: 0px;
+  top: 44px;
+}
+
+.Docs{
+  /* Необходимые документы */
+
+
+  position: static;
+  width: 235px;
+  height: 44px;
+  left: 425px;
+  top: 0px;
+
+
+  /* Inside Auto Layout */
+
+  flex: none;
+  order: 2;
+  flex-grow: 0;
+  margin: 0px 1px;
+}
+.Logo-left{
+  /* ЛогоКартинка */
+
+
+  position: static;
+  width: 779px;
+  height: 44px;
+  left: 661px;
+  top: 0px;
+
+
+  /* Inside Auto Layout */
+
+  flex: none;
+  order: 3;
   flex-grow: 0;
   margin: 0px 1px;
 }

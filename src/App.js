@@ -1,24 +1,61 @@
-import logo from './logo.svg';
 import './App.css';
+import button from './res/button.svg'
+import logo from  './res/logo.svg'
+import info from  './res/info.svg'
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  return(
+      <div>
+          <Header/>
+          <Info/>
+      </div>);
+
+}
+
+
+function Header(){
+  return(
+      <div className={'Header'}>
+        <Logo/>
+      </div>
+  );
+}
+
+function Logo(){
+    return(
+        <div className={'Logo'}>
+            <img src={logo}/>
+        </div>
+    );
+}
+
+function Info(){
+    return(
+        <div className={'Logo'}>
+            <img src={info}/>
+        </div>
+    );
+}
+
+function Some(){
+  return(<div>
+    <ul>
+      <p>Text</p>
+      <li>some text</li>
+      <li>now text</li>
+      <li>bet text</li>
+      <li>some same</li>
+    </ul>
+  </div>);
+}
+
+
+function ButtonBlue(){
+  return(
+      <div>
+        <img src={button}/>
+        </div>
   );
 }
 

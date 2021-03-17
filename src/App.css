@@ -2,37 +2,81 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+.App-text-shadow{
+  /* Текст */
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+  position: absolute;
+  width: 197px;
+  height: 62px;
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  font-family: Roboto, serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 28px;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-align: center;
+  text-decoration-line: underline;
 }
 
-.App-link {
-  color: #61dafb;
+.Button{
+  /* Заполнить */
+
+  position: relative;
+  width: 218px;
+  height: 57px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Header{
+  /* Frame 1 */
+
+
+  /* Auto Layout */
+
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+
+  position: absolute;
+  width: 1440px;
+  height: 44px;
+  left: 0px;
+  top: 0px;
+}
+
+.Logo{
+  /* Лого */
+
+  position: static;
+  width: 137px;
+  height: 44px;
+  left: 0px;
+  top: 0px;
+
+  /* Inside Auto Layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 0px 1px;
+}
+
+.info{
+  /* Информация */
+
+
+  position: static;
+  width: 286px;
+  height: 44px;
+  left: 138px;
+  top: 0px;
+
+
+  /* Inside Auto Layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  margin: 0px 1px;
 }

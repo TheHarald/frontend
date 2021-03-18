@@ -1,0 +1,28 @@
+.style-todo{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: .5rem;
+
+
+}
+.tab8px{
+    margin-right: 1rem;
+}
+.tab4px{
+    margin-right: 4px;
+}
+
+.button-exit{
+    background: aquamarine;
+    border-radius: 10%;
+    color: black;
+    border: none;
+}
+.done{
+    text-decoration: line-through;
+}

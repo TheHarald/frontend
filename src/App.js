@@ -7,23 +7,55 @@ import docs from './res/docs.svg'
 import logo_left from './res/logo_left.svg'
 import ToDoList from "./ToDo/ToDoList";
 import Item from "./ToDo/Item";
-
+import * as React from "react";
+import Context from './Context'
+import AddToDo from "./ToDo/AddToDo";
 
 
 function App() {
-    const todos= [
+
+    const [todos,setToDos] = React.useState([
         {id:1, completed:false, title:'Доделать теорвер.'},
         {id:2, completed:false, title:'Доделать джаву.'},
         {id:3, completed:false, title:'Доделать питон.'}
-    ]
+    ])
 
-  return(
-      <div className={'wrapper'}>
-        <h2>Test string</h2>
-        <ToDoList todos={todos}/>
-      </div>);
 
+
+    function toggleToDo(id){
+        setToDos(todos.map(todo =>{
+            if(todo.id === id){
+                todo.completed =!todo.completed
+            }
+            return todo
+        })
+        )
+    }
+
+    function removeToDo(id){
+        setToDos(todos.filter(todo=> todo.id !== id))
+    }
+
+    function addToDo(title){
+        setToDos(todos.concat([{
+                title,
+                id: Date.now(),
+                completed: false
+            }]))
+    }
+
+    return(
+        <Context.Provider value={{removeToDo}}>
+            <div className={'wrapper'}>
+                <h2>Test string</h2>
+                {todos.length ? <ToDoList todos={todos} onToggle={toggleToDo}/> : <p> no todos</p> }
+                {/*<AddToDo onCreate={addToDo()}/>*/}
+            </div>
+        </Context.Provider>
+    );
 }
+
+
 
 function Header(){
   return(

@@ -16,7 +16,7 @@ function AddToDo({onCreate}){
         <form onSubmit={submitHandler}>
             <input value={value} onChange={event => setValue(event.target.value)}/>
             <button type={"submit"}>
-                Add todo
+                Add some
             </button>
         </form>
         )

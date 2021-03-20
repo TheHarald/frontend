@@ -38,7 +38,7 @@ function App() {
 
     function addToDo(title){
         setToDos(todos.concat([{
-                title,
+                title:title,
                 id: Date.now(),
                 completed: false
             }]))
@@ -49,7 +49,7 @@ function App() {
             <div className={'wrapper'}>
                 <h2>Test string</h2>
                 {todos.length ? <ToDoList todos={todos} onToggle={toggleToDo}/> : <p> no todos</p> }
-                {/*<AddToDo onCreate={addToDo()}/>*/}
+                <AddToDo />
             </div>
         </Context.Provider>
     );

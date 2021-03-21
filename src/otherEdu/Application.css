@@ -2,28 +2,31 @@
     display:grid;
 
     grid-template-areas:
-            "h h"
-            "n c";
-    grid-template-rows: 60px 1fr;
+            "hdr cnt"
+            "nbr cnt";
+    grid-template-rows: 100px 1fr;
     grid-template-columns: 100px 10fr;
     grid-gap: 5px;
 }
 .nav{
-    grid-area: n;
+    grid-area: nbr;
     background-color: aquamarine;
 }
 
 .header{
-    grid-area: h;
+    grid-area: hdr;
     background-color: bisque;
+    text-align: center;
+
 
 }
 .header img{
-    width: 60px;
+    width: 90%;
+    height: 90%;
 
 }
 
 .content{
-    grid-area: c;
+    grid-area: cnt;
     background-color: aquamarine;
 }

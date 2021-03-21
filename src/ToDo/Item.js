@@ -1,7 +1,7 @@
 import React,{useContext} from 'react'
 import PropTypes from "prop-types";
 import './Item.css'
-import Context from '../Context'
+import Context from '../FirstApp/Context'
 
 
 

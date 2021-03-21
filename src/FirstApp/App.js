@@ -1,15 +1,15 @@
 import './App.css';
-import button from './res/button.svg'
-import logo from  './res/logo.svg'
-import info from  './res/info.svg'
-import buner from './res/buner.svg'
-import docs from './res/docs.svg'
-import logo_left from './res/logo_left.svg'
-import ToDoList from "./ToDo/ToDoList";
-import Item from "./ToDo/Item";
+import button from '../res/button.svg'
+import logo from '../res/logo.svg'
+import info from '../res/info.svg'
+import buner from '../res/buner.svg'
+import docs from '../res/docs.svg'
+import logo_left from '../res/logo_left.svg'
+import ToDoList from "../ToDo/ToDoList";
+import Item from "../ToDo/Item";
 import * as React from "react";
 import Context from './Context'
-import AddToDo from "./ToDo/AddToDo";
+import AddToDo from "../ToDo/AddToDo";
 
 
 function App() {

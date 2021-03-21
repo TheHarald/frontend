@@ -6,10 +6,11 @@ import reportWebVitals from './reportWebVitals';
 import Application from './otherEdu/Application'
 import AppVk from "./otherEdu/AppVk";
 import AppHooks from './Hooks/AppHooks'
+import Calculator from "./Hooks/Calculator";
 
 ReactDOM.render(
   <React.StrictMode>
-    <AppHooks/>
+    <Calculator/>
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -6,7 +6,8 @@ function AppHooks(){
 
     const [result,setResult] = useState(0)
 
-    let num1,num2;
+    const [num1,setNum1] = useState(0)
+    const [num2,setNum2] = useState(0)
 
 
 
@@ -18,12 +19,13 @@ function AppHooks(){
     }
 
     function showInput(event){
-        num1=parseInt(event.target.value,10)
+        setNum1(parseInt(event.target.value,10))
         console.log(num1)
     }
 
     function showInput2(event){
-        num2=parseInt(event.target.value,10)
+        setNum2(parseInt(event.target.value,10))
+        console.log(num2)
 
     }
 
@@ -34,8 +36,6 @@ function AppHooks(){
         setResult(num1-num2)
     }
 
-
-
     return(
         <div>
             <h1>Счётчик: {counter}</h1>
@@ -44,7 +44,7 @@ function AppHooks(){
             <div>
                 <h1>Калькулятор</h1>
                 <button onClick={add} className={'btn btn-primary'}>Сложение</button>
-                <button onClick={sub} className={'btn btn-primary'}>Вычитание</button>
+                <button onClick={()=> setResult(num1-num2) } className={'btn btn-primary'}>Вычитание</button>
                 <input onInput={showInput} type={'text'} placeholder={'число 1'}/>
                 <input onInput={showInput2} type={'text'} placeholder={'число 2'}/>
                 <h4>Результат: {result}</h4>
